@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+	targetNamespace="http://spring.io/guides/gs-producing-web-service"
+	elementFormDefault="qualified">
+
+	<xs:element name="filmsRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="filmsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="filme" type="tns:film" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="film">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string" />
+			<xs:element name="summary" type="xs:string" />
+			<xs:element name="movieTheater" type="xs:string" />
+			<xs:element name="schedule" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

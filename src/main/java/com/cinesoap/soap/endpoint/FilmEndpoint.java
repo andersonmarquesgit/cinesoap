@@ -17,7 +17,7 @@ public class FilmEndpoint {
 	@Autowired
 	private FilmService filmService;
 
-	@PayloadRoot(localPart = "filmRequest", namespace = NAMESPACE_URI)
+	@PayloadRoot(localPart = "filmsRequest", namespace = NAMESPACE_URI)
 	@ResponsePayload
 	public FilmResponse getFilms() {
 		return buildResponse();
